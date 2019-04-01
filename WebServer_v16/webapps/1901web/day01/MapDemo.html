@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MapDemo</title>
+</head>
+<body>
+<!-- #代表当前页面 -->
+<img src="../imgs/1.jpg" width="1000px" usemap="#mymap">
+<map name="mymap">
+	<!-- area:区域    shape:形状    rect:矩形   coords:表示对角线点的坐标   
+	herf:资源路径,可以是页面资源,也可以使文件资源,如果浏览器支持打开此文件在直接浏览,如果不支持则下载此文件-->
+	<area shape="rect" coords="0,0,100,100" href="http://www.tmooc.cn">
+	<area shape="circle" coords="200,200,50" href="../imgs/c.png">
+	<area shape="circle" coords="400,200,50" href="day01.zip">
+</map>
+</body>
+</html>

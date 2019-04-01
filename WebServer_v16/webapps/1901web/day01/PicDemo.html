@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>picDemo</title>
+</head>
+<body>
+	<!-- 
+	1) src路径:
+	① 相对路径: 
+ 		a. 图片和页面在同一目录,直接写图片名(后缀)
+ 		b. 图片在页面的上级目录, "../图片名"
+ 		c. 图片在页面的下级目录, "文件夹名/图片名"
+	② 绝对路径
+ 		访问站外资源时使用,以http开头
+ 		 访问站外资源也称为图片盗链,好处是节省自己网站资源,坏处是可能找不到图片
+	2) alt: 当图片不能正常显示时显示的文本内容
+	3) title: 当鼠标悬停在图片上时显示的文本
+	4) width/height: 图片的宽高.单位是px,也可以写%.
+	
+	-->
+	<!-- <img src="../imgs/a.jpg"> -->
+	<img alt="Beautiful girl" 
+	title="i love this girl"
+	width="50%" height="200px"
+	src="http://cdn.tmooc.cn/bsfile//courseImg///E193CCAC163B4B8DB7B3969CD8F7BFB2.jpg">
+	<img src="../imgs/2.gif">
+</body>
+</html>

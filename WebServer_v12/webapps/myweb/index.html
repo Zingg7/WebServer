@@ -1,0 +1,31 @@
+<html>
+	<!-- 文件头 -->
+	<head>
+		<!-- 指定字符集 -->
+		<!-- 如果使用浏览器访问该页面中看到的中文部分为乱码时,就是这里指定字符集有拼写错误 -->
+		<meta charset="UTF-8">
+		<!-- 标题 -->
+		<title>TOPIC</title>
+	</head>
+	
+	<body>
+		<center>
+			<!-- 页面中经常会接在一些资源,而这些资源在指定路径是也常常使用相对路径
+			那么对于在页面上使用的相对路径中"./"会被浏览器解释为当前页面所在的目录
+			例如下面的图片<img>标签中src用于指定这个图片的路径,我们给定的路径为:./logo.png
+			那么浏览器解释的实际路径:
+			首先访问当前页面是请求路径如下
+			http://localhost:8088/myweb/index.html
+			浏览器认为当前目录"./"指的是:
+			http://localhost:8088/myweb
+			所以该图片的实际路径会被浏览器解释为
+			http://localhost:8088/myweb/logo.png
+			-->
+			
+			<img src = "./google.png"><br>
+			<input type = "text" size = "64">
+			<input type = "button" value = "Click" onclick="alert('What do you want??')">
+		</center>
+	</body>
+	
+</html>

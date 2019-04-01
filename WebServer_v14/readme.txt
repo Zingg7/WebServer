@@ -1,0 +1,18 @@
+WebServer_v14
+
+本版本解决空请求问题
+
+HTTP协议中有说明这个情况,允许客户端发送空请求
+这意味着发送了空请求过来后服务端在解析请求时,如果直接读取第一行内容按照空格拆分请求行的三部分时,就会出现数组下标越界的情况
+
+解决办法:
+当HttpRequest在解析请求中的请求行时,若发现时空请求则抛出空请求异常(自定义异常)给ClientHandler,使其忽略本次请求处理
+
+
+实现:
+1) 在com.webserver.http包中添加一个自定义异常
+  EmptyRequestException 空请求异常
+2) 在HttpRequest的解析请求行方法:parseRequestLine中,当读取第一行字符串发现啥hi空字符串时,则抛出空请求异常给构造方法
+(因为是在HttpRequest的构造方法中调用的解析请求行方法)
+3) HttpRequest在调用解析请求行的方法时若发现其抛出了空请求异常则直接继续讲该异常抛出给ClientHandler
+4) ClientHandler若捕获到空请求异常则跳过处理和响应的步骤,忽略本次请求

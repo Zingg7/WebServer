@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Register</title>
+</head>
+<body>
+	<center>
+		<h1>用户登录</h1>
+		<form action = "./login" method = "get">
+			<table border = "1">
+					<tr>
+						<td>用户名:</td>
+						<!-- 所有在form表单中的输入框,都必须要指定name属性,浏览器就是根据该属性的值作为 参数名,将该输入框的值作为参数值传递给服务端的.若不指定则会忽略这个输入框 -->
+						<td><input name="username" type ="text"></td>
+					</tr>
+					<tr>
+						<td>密码:</td>
+						<td><input name="password" type ="password"></td>
+					</tr>
+					<td align="center" colspan="2">
+							<input type="submit" value="登录">
+					</td>
+			</table>	
+		</form>
+	</center>
+</body>
+</html>
